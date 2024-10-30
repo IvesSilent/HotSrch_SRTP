@@ -1,0 +1,186 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 40;
+        padding: 0;
+        background-color: #f7f7f7;
+     }
+h1 {
+    text-align:center;
+    color: #333333;
+}
+#introduction {
+    text-align:center;
+    margin: 20px;
+    font-size:15px;
+    color: #333333;
+}
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 20px; /* 设置 20 像素的圆角 */
+     }
+
+  .hotel-detail {
+    display: flex;
+    flex-direction: column; /* 设置为垂直布局 */
+}
+
+    .hotel-detail h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+     }
+
+    .hotel-detail p {
+        margin: 10px 0 15px; /* 增加底部间距，使文本之间的分隔更清晰 */
+        color: #555;
+     }
+
+    .hotel-comment {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+     }
+
+    .hotel-detail img {
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 10px; /* 设置 10 像素的圆角 */
+     }
+
+    .hotel-detail a {
+        color: #007bff;
+        text-decoration: underline; /* 添加下划线，强调是可点击的链接 */
+     }
+
+    .hotel-detail a:hover {
+    color: #0056b3; /* 鼠标悬浮时更改颜色，提供视觉反馈 */
+    }
+
+/* 真值卡片 */
+.hotel-info, .hotel-score {
+
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hotel-info {
+    background-color: white;
+    flex: 1 1 70%; /* 占据剩余空间的70% */
+    margin-right: 20px; /* 右侧留出一些间隙 */
+}
+
+.hotel-score {
+    width: 25%; /* 或根据页面布局调整 */
+    position: relative; /* 为后续可能的定位提供基础 */
+    flex: 1; /* 得分部分占用较小的空间 */
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    text-align: center; /* 文本居中显示 */
+    padding: 20px;
+    background-color: #FFA500; /* 深橙色背景色 */
+    border-radius: 10px; /* 圆角设计 */
+}
+
+.score-label {
+    font-size: 16px; /* 小号字体 */
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.score-value {
+    font-size: 48px; /* 特大号字体 */
+    color: #333;
+    font-weight: bold; /* 加粗显示 */
+}
+
+
+
+
+
+.back-button {
+    background-color: #333333;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* 自动左边距，推送到右边 */
+}
+
+.back-button:hover {
+    background-color: #555555; /* 修改为合适的颜色 */
+}
+
+.header {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: space-between; /* 在标题和按钮之间添加空间 */
+    padding: 20px; /* 适当的内边距 */
+}
+.info-score-container {
+    display: flex;
+    justify-content: space-between; /* 信息和得分并排显示 */
+    margin-top: 20px; /* 与头部有一定的间距 */
+}
+
+.score-tag {
+    display: inline-block; /* 使标签以内联块显示 */
+    background-color: #CC6600; /* 设置背景颜色，您可以根据需要更改颜色 */
+    color: white; /* 文字颜色为白色 */
+    padding: 5px 10px; /* 上下5px，左右10px的内边距 */
+    font-size: 16px; /* 字体大小 */
+    border-radius: 10px; /* 边缘圆角 */
+    margin: 5px 0; /* 上下间距5px，左右0 */
+    text-align: center; /* 文字居中 */
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* 在小屏幕上减少内边距 */
+    }
+
+    .hotel-detail img {
+        max-width: 100%; /* 在小屏幕上让图片占满容器宽度 */
+    }
+
+    .header {
+        flex-direction: column; /* 在小屏幕上将标题和返回按钮垂直排列 */
+    }
+
+    .info-score-container {
+        flex-direction: column; /* 在小屏幕上垂直堆叠 */
+    }
+
+    .back-button {
+        margin-top: 10px; /* 添加上边距，与标题分开 */
+        width: 100%; /* 按钮宽度占满 */
+    }
+    .score-tag {
+        padding: 3px 7px; /* 在小屏幕上减小内边距 */
+        font-size: 12px; /* 减小字体大小 */
+    }
+    .hotel-info, .hotel-score {
+        width: 100%; /* 小屏幕上占满整个容器宽度 */
+        float: none; /* 取消浮动 */
+        margin-bottom: 10px;
+    }
+
+    .score-value {
+        font-size: 36px; /* 在小屏幕上适当减小字号 */
+    }
+}

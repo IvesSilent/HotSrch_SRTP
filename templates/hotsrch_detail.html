@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒店真值发现_详情页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_detail.css') }}">
+</head>
+
+<body>
+
+
+<h1>酒店详情页</h1>
+<p id="introduction">
+    - 基于真值发现技术，集成多种工具和算法，实现了酒店信息的真值推荐 - <br>
+    以下是你所查询的酒店数据详情，以及来自携程、马蜂窝和途牛的数据
+</p>
+<div class="container">
+
+
+    <div class="hotel-detail">
+        <!-- 这里将动态展示酒店详情 -->
+        <div class="header">
+            <h2>{{hotel_name}}</h2>
+            <button onclick="goBack()" class="back-button">返回</button>
+        </div>
+        <div class="info-score-container">
+            <div class="hotel-info">
+                <img src="{{hotel_img}}" alt="{{hotel_name}}">
+                <p>城市：{{hotel_destination}}</p>
+                <p>位置：{{hotel_position}}</p>
+                <p>网站：<a href="{{hotel_website}}">{{hotel_website}}</a></p>
+            </div>
+            <div class="hotel-score">
+                <p class="score-label">得分真值</p>
+                <p class="score-value">{{hotel_score}}</p>
+            </div>
+        </div>
+
+        <!--        <img src="{{hotel_img}}" alt="{{hotel_name}}">-->
+        <!--        <p>评分：{{hotel_score}}</p>-->
+        <!--        <p>城市：{{hotel_destination}}</p>-->
+        <!--        <p>位置：{{hotel_position}}</p>-->
+        <!--        <p>网站：<a href="{{hotel_website}}">{{hotel_website}}</a></p>-->
+    </div>
+
+    {% if ctrip %}
+    <div class="hotel-comment" id="hotel-comment_1">
+        <h3>携程网信息</h3>
+        <p>酒店评价: {{ ctrip.comment }}</p>
+        <p>酒店评分: <span class="score-tag">{{ ctrip.score }}</span></p>
+    </div>
+    {% endif %}
+    {% if mafengwo %}
+    <div class="hotel-comment" id="hotel-comment_2">
+        <h3>马蜂窝信息</h3>
+        <p>酒店评价: {{ mafengwo.comment }}</p>
+        <p>酒店评分: <span class="score-tag">{{ mafengwo.score }}</span></p>
+    </div>
+    {% endif %}
+    {% if tuniu %}
+    <div class="hotel-comment" id="hotel-comment_3">
+        <h3>途牛网信息</h3>
+        <p>酒店评价: {{ tuniu.comment }}</p>
+        <p>酒店评分: <span class="score-tag">{{ tuniu.score }}</span></p>
+    </div>
+    {% endif %}
+</div>
+</body>
+<script src="{{ url_for('static', filename='script_detail.js') }}"></script>
+</html>

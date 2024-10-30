@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒店真值发现</title>
+    <!--设置格式css-->
+<!--    <link rel="stylesheet" href="style_homepage.css">-->
+<link rel="stylesheet" href="{{ url_for('static', filename='style_homepage.css') }}">
+</head>
+
+<body>
+<h1>基于真值发现技术的酒店推荐搜索</h1>
+<p id="introduction">
+    - 基于真值发现技术，集成多种工具和算法，实现了酒店信息的真值推荐 - <br>
+    输入关键词，点击按钮搜索酒店信息
+</p>
+
+<div class="container">
+    <!--container类的容器-->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="输入关键词搜索酒店（多个关键词用空格分隔）">
+        <button id="searchHot">搜索</button>
+    </div>
+    <!-- 输入框searchInput -->
+    <div id="hotelList">
+        <!--         这里将动态添加酒店信息-->
+    </div>
+</div>
+
+</body>
+
+<!--<script src="script_homepage.js"></script>-->
+<script src="{{ url_for('static', filename='script_homepage.js') }}"></script>
+</html>

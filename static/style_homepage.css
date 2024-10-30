@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    /* 设置页面字体为 Arial，如果 Arial 不可用则使用无衬线字体 */
+    margin: 40px;
+    /* 清除页面主体的外边距 */
+    padding: 0;
+    /* 清除页面主体的内边距 */
+    background-color: #eaeaea; /* 使用略微深一点的背景色，减少光的反射，更舒适 */
+        }
+
+h1 {
+    text-align:center;
+    color: #333333;
+}
+
+#introduction {
+    text-align:center;
+    margin: 20px;
+    font-size:15px;
+    color: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    /* 设置容器的最大宽度为 1200 像素 */
+    margin: 0 auto;
+    /* 使容器在页面中水平居中 */
+    padding: 20px;
+    /* 设置容器的内边距为 20 像素 */
+    background-color: white;
+    /* 设置容器背景颜色为白色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 为容器添加一个轻微的阴影效果 */
+        }
+
+
+
+.search-container {
+    display: flex;
+    /* 使用 Flexbox 布局 */
+}
+
+#searchInput {
+    flex: 1;
+    /* 让搜索输入框占据剩余空间 */
+    padding: 15px;
+    width: 80%;
+
+    /* border: 1px solid #ccc; */
+
+    font-size: 16px; /* 增大字体，提高可读性 */
+    border: 2px solid #aaa; /* 加粗边框 */
+
+    border-radius: 5px;
+    margin-right:10px;
+    box-sizing: border-box;
+}
+
+#searchHot {
+    background-color: #333333;
+    color: white;
+
+    /* padding: 0px 50px;*/
+    padding: 15px 60px; /* 增加按钮的内边距，使其更容易点击 */
+    font-size: 16px; /* 增大按钮文字的字体大小 */
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchHot:hover {
+    background-color: #555555; /* 修改为合适的颜色 */
+}
+
+.hotel-row {
+    display: flex;
+    /* 使用弹性布局，使子元素在一行内显示 */
+    flex-wrap: wrap;
+    /* 当子元素超出一行时，自动换行 */
+    margin-top:10px;
+        }
+
+.hotel-card {
+    flex: 0 0 calc(30.7% - 20px);
+    /* 设置酒店卡片的弹性属性，占 30.7%宽度并减去 20 像素 */
+    display: flex;
+    /* 使用弹性布局 */
+    border: 1px solid #ddd;
+    /* 添加一个 1 像素宽的浅灰色边框 */
+    padding: 15px;
+    /* 设置内边距为 15 像素 */
+    margin: 10px;
+    /* 设置外边距为 10 像素 */
+    border-radius: 10px;
+    /* 设置 10 像素的圆角 */
+    background-color: #fff;
+    /* 背景颜色为白色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 添加轻微的阴影效果 */
+    cursor: pointer;
+    /* 当鼠标悬停在酒店卡片上时，显示为手型指针 */
+        }
+
+.hotel-card:hover {
+    background-color: #cccccc;
+}
+
+.hotel-info {
+    flex: 1;
+    /* 使酒店信息部分占满剩余空间 */
+    display: flex;
+    /* 使用弹性布局 */
+    flex-direction: column;
+    /* 设置弹性容器的方向为垂直方向 */
+    width: 50%;
+    /* 设置酒店信息部分的宽度为父元素的 50% */
+
+    padding: 10px; /* 增加内边距，让文本不会太紧贴边缘 */
+        }
+
+.hotel-card h2 {
+    font-size: 16px;
+    /* 设置酒店名称的字体大小为 16 像素 */
+    font-weight: bold;
+    /* 设置酒店名称为粗体 */
+    color: #333333;
+    /* 设置酒店名称的颜色为深灰色 */
+    margin-top: 0px;
+    /* 在酒店名称下方添加 5 像素的外边距 */
+    margin-bottom: 8px;
+    /* 在酒店名称下方添加 5 像素的外边距 */
+
+    text-align: left; /* 将标题对齐方式改为左对齐，通常看起来更自然 */
+        }
+
+.score-box {
+    background-color: #333333;
+    /* 设置评分框的背景颜色为蓝色 */
+    padding: 5px;
+    /* 设置内边距为 5 像素 */
+    color: white;
+    /* 设置评分框内文字颜色为白色 */
+    width: 40px;
+    /* 设置评分框的宽度为 40 像素 */
+    margin-left: 0px;
+    /* 在酒店名称下方添加 5 像素的外边距 */
+    margin-top: 5px;
+    /* 在酒店名称下方添加 5 像素的外边距 */
+    margin-bottom: 2px;
+    /* 在酒店名称下方添加 5 像素的外边距 */
+    border-radius: 6px;
+    /* 设置 10 像素的圆角 */
+        }
+
+.score-box p {
+    font-weight: bold;
+    /* 设置评分文字为粗体 */
+    text-align: center;
+    margin: 0;
+    /* 清除评分文字的外边距 */
+    max-width: 40px;
+    /* 设置评分文字的最大宽度为 40 像素 */
+    overflow: hidden;
+    /* 当内容超出宽度时隐藏超出部分 */
+    text-overflow: ellipsis;
+    /* 以省略号显示超出部分 */
+    white-space: nowrap;
+    /* 强制不换行 */
+        }
+
+.hotel-card img {
+    max-width: 150px;
+    /* 设置酒店图片的最大宽度为 150 像素 */
+    height: auto;
+    /* 自动调整图片高度以保持比例 */
+    margin-left: 20px;
+    /* 在图片左侧添加 5 像素的外边距 */
+    border-radius: 6px;
+    /* 设置 10 像素的圆角 */
+        }
+
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* 在小屏幕上，输入框和按钮垂直排列 */
+    }
+    #searchInput,
+    #searchHot {
+        width: 100%; /* 使输入框和按钮在小屏幕上占满整个容器宽度 */
+        margin-top: 10px; /* 添加一些间距 */
+    }
+    .hotel-card {
+        flex: 0 0 100%; /* 在小屏幕上，酒店卡片占满整行 */
+    }
+}
